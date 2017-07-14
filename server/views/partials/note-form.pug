@@ -1,0 +1,26 @@
+.row
+  .col
+    form#note-form
+      .form-group.row
+        label.col-sm-3.col-sm-form-label(for='note-type') Type
+        .col-sm-9
+          select.form-control#note-type(name='type')
+            option(value='event', selected) Event update
+            option(value='announce') Announcement
+
+      .form-group.row
+        label.col-sm-3.col-sm-form-label(for='note-title') Title
+        .col-sm-9
+          input.form-control#note-title(name='title', type='text', autofocus, value='Company changes')
+
+      .form-group.row
+        label.col-sm-3.col-sm-form-label(for='note-link') Click state
+        .col-sm-9
+          input.form-control#note-link(name='link', type='text', value='app.company({ companyId: 2 })')
+
+      .form-group.row
+        .col-sm-9.offset-sm-3
+          btn.btn.btn-primary#note-send(type='submit') Send
+
+  .col
+    pre#raw {}
